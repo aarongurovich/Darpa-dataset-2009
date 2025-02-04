@@ -1,7 +1,7 @@
 import pandas as pd
 
-input_csv = "processed_data/csv/tcp_normal_behavior.csv"  
-output_csv = "processed_data/csv/tcp_normal_behavior.csv"
+input_csv = "processed_data/csv/RAW.csv"  
+output_csv = "processed_data/csv/RAW.csv"
 
 df = pd.read_csv(input_csv)
 

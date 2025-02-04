@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 
-csv_path = "C:/Users/Aaron/New Darpa 2009/processed_data/csv/one_structures.csv"
+csv_path = "C:/Users/Aaron/New Darpa 2009/processed_data/csv/RAW.csv"
 df = pd.read_csv(csv_path)
 
 print("Available columns in CSV:", df.columns)
@@ -14,7 +14,7 @@ for col in df.columns:
         break
 
 if info_column is None:
-    print("⚠️ Warning: No 'Info' column found. Skipping parsing step.")
+    print("Warning: No 'Info' column found. Skipping parsing step.")
 else:
     print(f"Found 'Info' column: {info_column}")
 
@@ -46,7 +46,7 @@ else:
 
     df.drop(columns=[info_column], inplace=True)
 
-output_csv = "C:/Users/Aaron/New Darpa 2009/processed_data/csv/structured_network_data.csv"
+output_csv = "C:/Users/Aaron/New Darpa 2009/processed_data/csv/RAW.csv"
 df.to_csv(output_csv, index=False)
 
 print(f"Data successfully structured and saved as '{output_csv}'!")
